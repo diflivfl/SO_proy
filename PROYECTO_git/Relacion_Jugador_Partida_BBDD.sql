@@ -1,0 +1,7 @@
+CREATE TABLE jugadores_partida (
+    ID_j INT NOT NULL,
+    ID_p INT NOT NULL,
+    PRIMARY KEY (ID_j, ID_p),
+    FOREIGN KEY (ID_j) REFERENCES jugadores(ID_j) ON DELETE CASCADE,
+    FOREIGN KEY (ID_p) REFERENCES partida(ID_p) ON DELETE CASCADE
+) ENGINE = InnoDB;
